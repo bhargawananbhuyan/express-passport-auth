@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <form action="/auth/register" method="post">
+        <h4>Register</h4>
+        <% if (successMsg) { %>
+            <div>
+                <%= successMsg %> 
+            </div>
+        <% } %> 
+        <% if (errorMsg) { %>
+            <div>
+                <%= errorMsg %> 
+            </div>
+        <% } %> 
+        <div>
+            <input type="text" name="fullName" placeholder="Full name" />
+        </div>
+        <div>
+            <input type="email" name="email" placeholder="Email" />
+        </div>
+        <div>
+            <input type="password" name="password" placeholder="Password" />
+        </div>
+        <div>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+</body>
+</html>
